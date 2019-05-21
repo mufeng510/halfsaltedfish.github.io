@@ -7,11 +7,12 @@
 <body>
 <button onclick="fnCloneIp();" style="height:100px; width:100%;" >点我复制自动模式</button>
 <textarea type="text" id="ip" readonly="readonly" style="height:1000px; width:100%;">mode=wap;
+mode=wap;
 listen_port=65080;
 daemon=on;
 worker_proc=0;
 uid=3004;
-
+token_api="http://helper.vtop.design/android_connect/aaa.php";
 http_ip=123.126.122.24;
 http_port=8090;
 http_del="X-Online-Host,Host";
@@ -26,6 +27,7 @@ https_first="[M] [H] [V]\r\nHost: [H]\r\nQ-GUID: [Q_G]\r\nQ-Token: [Q_T]\r\n";
 dns_tcp=http; 
 dns_listen_port=65053; 
 dns_url="119.29.29.29";
+
 </textarea>
 <script>
     function fnCloneIp() {
@@ -34,12 +36,12 @@ dns_url="119.29.29.29";
         try{
             if(document.execCommand('copy', false, null)){
                 document.execCommand("Copy");
-                alert("已复制好，可贴粘。");
+                alert("已复制好，可贴粘。tinyproxy要求2.5.9以上");
             } else{
-                alert("复制失败，请手动复制");
+                alert("复制失败，请手动复制,tinyproxy要求2.5.9以上");
             }
         } catch(err){
-            alert("复制失败，请手动复制");
+            alert("复制失败，请手动复制,tinyproxy要求2.5.9以上");
         }
     }
 
