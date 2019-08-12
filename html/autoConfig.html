@@ -5,7 +5,8 @@
     <title>自动模式</title>
 </head>
 <body>
-	<select id="ip" onchange="choseIp()" style="height:100px; width:100%;">
+    <button onclick="fnCloneIp();" style="height:100px; width:100%;" >点我复制自动模式</button>
+    <select id="ip" onchange="choseIp()" style="height:100px; width:50%;">
         <option value="" selected="selected" disabled="disabled">请选择</option>
         <option value="157.255.173.182">广东157</option>
         <option value="140.207.62.38">上海140</option>
@@ -18,7 +19,6 @@
         <option value="58.144.152.26">重庆2</option>
         <option value="111.161.64.51">天津111.51</option>
     </select>
-    <button onclick="fnCloneIp();" style="height:100px; width:100%;" >点我复制自动模式</button>
     <textarea type="text" id="modle"  style="height:1000px; width:100%;">请选择ip</textarea>
     <script>
         function choseIp(){
