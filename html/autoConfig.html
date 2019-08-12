@@ -5,44 +5,44 @@
     <title>自动模式</title>
 </head>
 <body>
-	<select id="ip" onchange="choseIp()">
-        <option value="" selected="selected" disabled="disabled" style="height:100px; width:100%;">请选择</option>
-<option value="157.255.173.182">广东157</option>
-<option value="140.207.62.38">上海140</option>
-<option value="210.22.247.196">上海210</option>
-<option value="111.206.25.206">北京111</option>
-<option value="123.126.122.24">北京123</option>
-<option value="125.39.52.35">天津125</option>
-<option value="111.161.111.158">天津111</option>
-<option value="58.144.152.119">重庆1</option>
-<option value="58.144.152.26">重庆2</option>
-<option value="111.161.64.51">天津111.51</option>
-</select>
-<button onclick="fnCloneIp();" style="height:100px; width:100%;" >点我复制自动模式</button>
-<textarea type="text" id="modle"  style="height:1000px; width:100%;">请选择ip</textarea>
-<script>
-    function choseIp(){
-        var ip = document.getElementById("ip");
-        var index = ip.selectedIndex;
-        var ip_value = ip.options[index].value;
-        var modle = document.getElementById('modle');
-        modle.value="mode=wap;\nlisten_port=65080;\ndaemon=on;\nworker_proc=0;\nuid=3004;\ntoken_api=\"http://helper.vtop.design/android_connect/aaa.php\";\nhttp_ip="+ip_value+";\nhttp_port=8090;\nhttp_del=\"X-Online-Host,Host\";\nhttp_first=\"[M] http://[H][U] [V]\\r\\nQ-GUID: [Q_G]\\r\\nQ-Token: [Q_T]\\r\\nHost: [H]\\r\\n\";\n\nhttps_connect=on;\nhttps_ip="+ip_value+";\nhttps_port=8091;\nhttps_del=\"X-Online-Host,Host\";\nhttps_first=\"[M] [H] [V]\\r\\nHost: [H]\\r\\nQ-GUID: [Q_G]\\r\\nQ-Token: [Q_T]\\r\\n\";\n\ndns_tcp=http; \ndns_listen_port=65053; \ndns_url=\"119.29.29.29\";"
-    }
-    function fnCloneIp() {
-        var modle = document.getElementById('modle');
-        modle.select();
-        try{
-            if(document.execCommand('copy', false, null)){
-                document.execCommand("Copy");
-                alert("已复制好，可贴粘。tinyproxy要求2.5.9以上");
-            } else{
+	<select id="ip" onchange="choseIp()" style="height:100px; width:100%;">
+        <option value="" selected="selected" disabled="disabled">请选择</option>
+        <option value="157.255.173.182">广东157</option>
+        <option value="140.207.62.38">上海140</option>
+        <option value="210.22.247.196">上海210</option>
+        <option value="111.206.25.206">北京111</option>
+        <option value="123.126.122.24">北京123</option>
+        <option value="125.39.52.35">天津125</option>
+        <option value="111.161.111.158">天津111</option>
+        <option value="58.144.152.119">重庆1</option>
+        <option value="58.144.152.26">重庆2</option>
+        <option value="111.161.64.51">天津111.51</option>
+    </select>
+    <button onclick="fnCloneIp();" style="height:100px; width:100%;" >点我复制自动模式</button>
+    <textarea type="text" id="modle"  style="height:1000px; width:100%;">请选择ip</textarea>
+    <script>
+        function choseIp(){
+            var ip = document.getElementById("ip");
+            var index = ip.selectedIndex;
+            var ip_value = ip.options[index].value;
+            var modle = document.getElementById('modle');
+            modle.value="mode=wap;\nlisten_port=65080;\ndaemon=on;\nworker_proc=0;\nuid=3004;\ntoken_api=\"http://helper.vtop.design/android_connect/aaa.php\";\nhttp_ip="+ip_value+";\nhttp_port=8090;\nhttp_del=\"X-Online-Host,Host\";\nhttp_first=\"[M] http://[H][U] [V]\\r\\nQ-GUID: [Q_G]\\r\\nQ-Token: [Q_T]\\r\\nHost: [H]\\r\\n\";\n\nhttps_connect=on;\nhttps_ip="+ip_value+";\nhttps_port=8091;\nhttps_del=\"X-Online-Host,Host\";\nhttps_first=\"[M] [H] [V]\\r\\nHost: [H]\\r\\nQ-GUID: [Q_G]\\r\\nQ-Token: [Q_T]\\r\\n\";\n\ndns_tcp=http; \ndns_listen_port=65053; \ndns_url=\"119.29.29.29\";"
+        }
+        function fnCloneIp() {
+            var modle = document.getElementById('modle');
+            modle.select();
+            try{
+                if(document.execCommand('copy', false, null)){
+                    document.execCommand("Copy");
+                    alert("已复制好，可贴粘。tinyproxy要求2.5.9以上");
+                } else{
+                    alert("复制失败，请手动复制,tinyproxy要求2.5.9以上");
+                }
+            } catch(err){
                 alert("复制失败，请手动复制,tinyproxy要求2.5.9以上");
             }
-        } catch(err){
-            alert("复制失败，请手动复制,tinyproxy要求2.5.9以上");
         }
-    }
 
-</script>
+    </script>
 </body>
 </html>
