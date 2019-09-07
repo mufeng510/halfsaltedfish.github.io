@@ -34,12 +34,12 @@
             try{
                 if(document.execCommand('copy', false, null)){
                     document.execCommand("Copy");
-                    alert("已复制好，可贴粘。tinyproxy要求2.5.9以上");
+                    alert("已复制好，可贴粘。tinyproxy要求2.5.9以上并在高级设置中开启本地WPN模式");
                 } else{
-                    alert("复制失败，请手动复制,tinyproxy要求2.5.9以上");
+                    alert("复制失败，请手动复制,tinyproxy要求2.5.9以上并在高级设置中开启本地WPN模式");
                 }
             } catch(err){
-                alert("复制失败，请手动复制,tinyproxy要求2.5.9以上");
+                alert("复制失败，请手动复制,tinyproxy要求2.5.9以上并在高级设置中开启本地WPN模式");
             }
         }
 
