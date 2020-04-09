@@ -26,7 +26,7 @@
             var index = ip.selectedIndex;
             var ip_value = ip.options[index].value;
             var modle = document.getElementById('modle');
-            modle.value="mode=wap;\nlisten_port=65080;\ndaemon=on;\nworker_proc=0;\nuid=3004;\ntoken_api=\"https://gitee.com/r0x/WK/raw/master/wk.htm\";\nhttp_ip="+ip_value+";\nhttp_port=8090;\nhttp_del=\"X-Online-Host,Host\";\nhttp_first=\"[M] http://[H][U] [V]\\r\\nQ-GUID: [Q_G]\\r\\nQ-Token: [Q_T]\\r\\nHost: [H]\\r\\n\";\n\nhttps_connect=on;\nhttps_ip="+ip_value+";\nhttps_port=8091;\nhttps_del=\"X-Online-Host,Host\";\nhttps_first=\"[M] [H] [V]\\r\\nHost: [H]\\r\\nQ-GUID: [Q_G]\\r\\nQ-Token: [Q_T]\\r\\n\";\n\ndns_tcp=http; \ndns_listen_port=65053; \ndns_url=\"119.29.29.29\";"
+            modle.value="mode=wap;\nlisten_port=65080;\ndaemon=on;\nworker_proc=0;\nuid=3004;\ntoken_api=\"http://wk.xxzml.cn/KingCardServices/get_config.php?id=2\";\nhttp_ip="+ip_value+";\nhttp_port=8090;\nhttp_del=\"X-Online-Host,Host\";\nhttp_first=\"[M] http://[H][U] [V]\\r\\nQ-GUID: [Q_G]\\r\\nQ-Token: [Q_T]\\r\\nHost: [H]\\r\\n\";\n\nhttps_connect=on;\nhttps_ip="+ip_value+";\nhttps_port=8091;\nhttps_del=\"X-Online-Host,Host\";\nhttps_first=\"[M] [H] [V]\\r\\nHost: [H]\\r\\nQ-GUID: [Q_G]\\r\\nQ-Token: [Q_T]\\r\\n\";\n\ndns_tcp=http; \ndns_listen_port=65053; \ndns_url=\"119.29.29.29\";"
         }
         function fnCloneIp() {
             var modle = document.getElementById('modle');
